@@ -3,6 +3,15 @@
 
 using namespace std;
 
+/*
+    Inorder Traveseral involves navigating a binary tree from left to right.
+                6   
+        1               3
+    2       3       2       1
+
+    This binary tree what output [2, 1, 3, 6, 2, 3, 1]
+*/
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -14,8 +23,22 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+    int returnValue(TreeNode* root){
+        if (root == NULL){
+            return;
+        };
         
+    }
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> outputVector = {};
+        vector<TreeNode*> currentNodes = {root};
+        vector<int> currentIndexes = {0};
+        //Search the tree to find the left most node so we have a starting point.
+        while(currentNodes.size() != 0){
+            
+        };
+
+        return outputVector;
     }
 };
 
