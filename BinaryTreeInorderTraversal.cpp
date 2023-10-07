@@ -23,22 +23,15 @@ struct TreeNode {
 
 class Solution {
 public:
-    int returnValue(TreeNode* root){
-        if (root == NULL){
-            return;
-        };
-        
-    }
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> outputVector = {};
-        vector<TreeNode*> currentNodes = {root};
-        vector<int> currentIndexes = {0};
-        //Search the tree to find the left most node so we have a starting point.
-        while(currentNodes.size() != 0){
-            
-        };
-
-        return outputVector;
+        vector<int> ans;
+        if (root == NULL) return ans;
+        vector<int> left = inorderTraversal(root->left);
+        ans.insert(ans.end(), left.begin(), left.end());
+        ans.push_back(root->val);
+        vector<int> right = inorderTraversal(root->right);
+        ans.insert(ans.end(), right.begin(), right.end());
+        return ans;
     }
 };
 
